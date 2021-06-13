@@ -32,4 +32,7 @@ if __name__ == '__main__':
     for i in index_dict:
         unido_p5_linkage_df.loc[unido_p5_linkage_df['country_code'] == i, 'country_iso3'] = index_dict[i]
 
-    unido_p5_linkage_df.to_pickle(os.path.join(const.TEMP_PATH, '20210613_unido_p5_linkage_file.pkl'))
+    unido_p5_linkage_df.loc[unido_p5_linkage_df['country_iso3'] != 'Yugoslavia', 'country_iso3'] = 'SRB'
+    unido_p5_linkage_df.loc[unido_p5_linkage_df['country_iso3'] != 'Serbia and Montenegro', 'country_iso3'] = 'SCG'
+    unido_p5_linkage_df2: DataFrame = unido_p5_linkage_df.drop_duplicates()
+    unido_p5_linkage_df2.to_pickle(os.path.join(const.TEMP_PATH, '20210613_unido_p5_linkage_file.pkl'))
