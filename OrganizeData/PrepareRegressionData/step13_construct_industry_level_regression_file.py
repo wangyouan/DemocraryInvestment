@@ -46,55 +46,55 @@ if __name__ == '__main__':
         unido_with_p5_df.loc[:, 'ln{}'.format(key)] = unido_with_p5_df[key].apply(lambda x: np.log(x + 1))
 
     unido_with_p5_df.loc[:, 'FemaleRatio'] = unido_with_p5_df['NumFemaleEmployee'] / unido_with_p5_df['NumEmployee']
-    unido_with_p5_df.loc[:, 'OutputPerEstab'] = unido_with_p5_df['Output'] / unido_with_p5_df['NumEstablishments']
+    unido_with_p5_df.loc[:, 'OutputPerEstab'] = unido_with_p5_df['Output'] / unido_with_p5_df['NumEstablishments'] / 1e6
     unido_with_p5_df.loc[:, 'OutputPPPerEstab'] = unido_with_p5_df['OutputProducerPrices'] / unido_with_p5_df[
-        'NumEstablishments']
+        'NumEstablishments'] / 1e6
     unido_with_p5_df.loc[:, 'OutputFVPerEstab'] = unido_with_p5_df['OutputFactorValues'] / unido_with_p5_df[
-        'NumEstablishments']
+        'NumEstablishments'] / 1e6
     unido_with_p5_df.loc[:, 'OutputBPPerEstab'] = unido_with_p5_df['OutputBasicPrices'] / unido_with_p5_df[
-        'NumEstablishments']
+        'NumEstablishments'] / 1e6
 
-    unido_with_p5_df.loc[:, 'VAPerEstab'] = unido_with_p5_df['VA'] / unido_with_p5_df['NumEstablishments']
+    unido_with_p5_df.loc[:, 'VAPerEstab'] = unido_with_p5_df['VA'] / unido_with_p5_df['NumEstablishments'] / 1e6
     unido_with_p5_df.loc[:, 'VAPPPerEstab'] = unido_with_p5_df['VAProducerPrices'] / unido_with_p5_df[
-        'NumEstablishments']
+        'NumEstablishments'] / 1e6
     unido_with_p5_df.loc[:, 'VAFVPerEstab'] = unido_with_p5_df['VAFactorValues'] / unido_with_p5_df[
-        'NumEstablishments']
+        'NumEstablishments'] / 1e6
     unido_with_p5_df.loc[:, 'VABPPerEstab'] = unido_with_p5_df['VABasicPrices'] / unido_with_p5_df[
-        'NumEstablishments']
+        'NumEstablishments'] / 1e6
 
-    unido_with_p5_df.loc[:, 'OutputPerEnter'] = unido_with_p5_df['Output'] / unido_with_p5_df['NumEnterprises']
+    unido_with_p5_df.loc[:, 'OutputPerEnter'] = unido_with_p5_df['Output'] / unido_with_p5_df['NumEnterprises'] / 1e6
     unido_with_p5_df.loc[:, 'OutputPPPerEnter'] = unido_with_p5_df['OutputProducerPrices'] / unido_with_p5_df[
-        'NumEnterprises']
+        'NumEnterprises'] / 1e6
     unido_with_p5_df.loc[:, 'OutputFVPerEnter'] = unido_with_p5_df['OutputFactorValues'] / unido_with_p5_df[
-        'NumEnterprises']
+        'NumEnterprises'] / 1e6
     unido_with_p5_df.loc[:, 'OutputBPPerEnter'] = unido_with_p5_df['OutputBasicPrices'] / unido_with_p5_df[
-        'NumEnterprises']
+        'NumEnterprises'] / 1e6
 
-    unido_with_p5_df.loc[:, 'VAPerEnter'] = unido_with_p5_df['VA'] / unido_with_p5_df['NumEnterprises']
+    unido_with_p5_df.loc[:, 'VAPerEnter'] = unido_with_p5_df['VA'] / unido_with_p5_df['NumEnterprises'] / 1e6
     unido_with_p5_df.loc[:, 'VAPPPerEnter'] = unido_with_p5_df['VAProducerPrices'] / unido_with_p5_df[
-        'NumEnterprises']
+        'NumEnterprises'] / 1e6
     unido_with_p5_df.loc[:, 'VAFVPerEnter'] = unido_with_p5_df['VAFactorValues'] / unido_with_p5_df[
-        'NumEnterprises']
+        'NumEnterprises'] / 1e6
     unido_with_p5_df.loc[:, 'VABPPerEnter'] = unido_with_p5_df['VABasicPrices'] / unido_with_p5_df[
-        'NumEnterprises']
+        'NumEnterprises'] / 1e6
 
-    unido_with_p5_df.loc[:, 'WagePerEmployee'] = unido_with_p5_df['Wages'] / unido_with_p5_df['NumEmployee']
+    unido_with_p5_df.loc[:, 'WagePerEmployee'] = unido_with_p5_df['Wages'] / unido_with_p5_df['NumEmployee'] / 1e3
 
-    unido_with_p5_df.loc[:, 'OutputPerEmployee'] = unido_with_p5_df['Output'] / unido_with_p5_df['NumEmployee']
+    unido_with_p5_df.loc[:, 'OutputPerEmployee'] = unido_with_p5_df['Output'] / unido_with_p5_df['NumEmployee'] / 1e3
     unido_with_p5_df.loc[:, 'OutputPPPerEmployee'] = unido_with_p5_df['OutputProducerPrices'] / unido_with_p5_df[
-        'NumEmployee']
+        'NumEmployee'] / 1e3
     unido_with_p5_df.loc[:, 'OutputFVPerEmployee'] = unido_with_p5_df['OutputFactorValues'] / unido_with_p5_df[
-        'NumEmployee']
+        'NumEmployee'] / 1e3
     unido_with_p5_df.loc[:, 'OutputBPPerEmployee'] = unido_with_p5_df['OutputBasicPrices'] / unido_with_p5_df[
-        'NumEmployee']
+        'NumEmployee'] / 1e3
 
-    unido_with_p5_df.loc[:, 'VAPerEmployee'] = unido_with_p5_df['VA'] / unido_with_p5_df['NumEmployee']
+    unido_with_p5_df.loc[:, 'VAPerEmployee'] = unido_with_p5_df['VA'] / unido_with_p5_df['NumEmployee'] / 1e3
     unido_with_p5_df.loc[:, 'VAPPPerEmployee'] = unido_with_p5_df['VAProducerPrices'] / unido_with_p5_df[
-        'NumEmployee']
+        'NumEmployee'] / 1e3
     unido_with_p5_df.loc[:, 'VAFVPerEmployee'] = unido_with_p5_df['VAFactorValues'] / unido_with_p5_df[
-        'NumEmployee']
+        'NumEmployee'] / 1e3
     unido_with_p5_df.loc[:, 'VABPPerEmployee'] = unido_with_p5_df['VABasicPrices'] / unido_with_p5_df[
-        'NumEmployee']
+        'NumEmployee'] / 1e3
 
     unido_with_p5_df.loc[:, 'OutputPerCapital'] = unido_with_p5_df['Output'] / unido_with_p5_df['FixedCapital']
     unido_with_p5_df.loc[:, 'OutputPPPerCapital'] = unido_with_p5_df['OutputProducerPrices'] / unido_with_p5_df[
@@ -112,5 +112,5 @@ if __name__ == '__main__':
     unido_with_p5_df.loc[:, 'VABPPerCapital'] = unido_with_p5_df['VABasicPrices'] / unido_with_p5_df[
         'FixedCapital']
     unido_with_p5_df2: DataFrame = unido_with_p5_df.replace([np.inf, -np.inf], np.nan)
-    unido_with_p5_df.to_stata(os.path.join(const.RESULT_PATH, '20210614_unido_p5_regression_data.dta'),
-                              write_index=False)
+    unido_with_p5_df2.to_stata(os.path.join(const.RESULT_PATH, '20210614_unido_p5_regression_data.dta'),
+                               write_index=False)
