@@ -46,4 +46,6 @@ if __name__ == '__main__':
         columns={'loc': 'country_iso3'})
 
     reg_df_control: DataFrame = reg_df_cnts.merge(country_control_df, on=[const.YEAR, 'country_iso3'], how='left')
-    reg_df_control.to_stata(os.path.join(const.RESULT_PATH, '20210614_unido_p5_with_ctrl.dta'), write_index=False)
+    reg_df_control.loc[:, 'TOTAL_TRADE'] = reg_df_control['EXPORT_RATIO'] + reg_df_control['IMPORT_RATIO']
+    reg_df_control.loc[:, 'ISIC_YEAR'] = reg_df_control.apply(lambda x: '{}{}'.format(x['ISIC'], x[const.YEAR]), axis=1)
+    reg_df_control.to_stata(os.path.join(const.RESULT_PATH, '20210615_unido_p5_with_ctrl.dta'), write_index=False)
